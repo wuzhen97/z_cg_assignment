@@ -1,0 +1,68 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# I/O Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+# 待处理的图像
+io.iImagePath: "/home/wz/git_ws/cv_2d/img/test.webp"
+io.addNoise: 1
+# GS
+io.oSeqGS: "/home/wz/git_ws/cv_2d/data/seq_gs"
+io.oResultGS: "/home/wz/git_ws/cv_2d/data/result_gs.txt"
+# GF
+io.oSeqGF: "/home/wz/git_ws/cv_2d/data/seq_gf"
+io.oResultGF: "/home/wz/git_ws/cv_2d/data/result_gf.txt"
+# GGF
+io.oSeqGGF: "/home/wz/git_ws/cv_2d/data/seq_ggf"
+io.oResultGGF: "/home/wz/git_ws/cv_2d/data/result_ggf.txt"
+# WGGF
+io.oSeqWGGF: "/home/wz/git_ws/cv_2d/data/seq_wggf"
+io.oResultWGGF: "/home/wz/git_ws/cv_2d/data/result_wggf.txt"
+
+#--------------------------------------------------------------------------------------------
+# Noise Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+GaussianNoise.mu: 0
+GaussianNoise.sigma: 24
+GaussianNoise.oPath: "/home/wz/git_ws/cv_2d/img"
+
+#--------------------------------------------------------------------------------------------
+# Algorithm test parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+# 各算法实验参数，含有Win的参数请输入奇数（窗口宽度）
+# 执行算法时，将从min到max参数进行迭代，
+# 如果想输出固定参数的结果，请令他们相等
+# 3,13
+GS.minWin: 3 #窗口半径起始
+GS.maxWin: 7 #窗口半径终点
+GS.minSigma: 0.1 #带宽起始
+GS.maxSigma: 10 #带宽终止
+GS.stepSigma: 0.1 #步距
+
+GF.minWin: 3
+GF.maxWin: 7
+GF.minSigma: 0.1
+GF.maxSigma: 40
+GF.stepSigma: 0.5
+
+GGF.minWin: 3
+GGF.maxWin: 7
+GGF.minSigma: 0.1
+GGF.maxSigma: 40
+GGF.stepSigma: 0.5
+
+GGFGS.win: 3
+GGFGS.sigma: 0.7
+
+WGGF.minWin: 5
+WGGF.maxWin: 11
+WGGF.minSigma: 0.1
+WGGF.maxSigma: 40
+WGGF.stepSigma: 0.5
+
+WGGFGS.win: 3
+WGGFGS.sigma: 0.7
+
+WGGF.minLambda: 0
+WGGF.maxLambda: 20
+WGGF.stepLambda: 1
